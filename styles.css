@@ -1,0 +1,12 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Убираем отступы по умолчанию */
+    padding: 0; /* Убираем внутренние отступы по умолчанию */
+    background-image: url('Wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+  }
