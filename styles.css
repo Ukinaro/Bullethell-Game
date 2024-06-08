@@ -11,6 +11,12 @@ body, html {
     background-position: center;
   }
 
+
+  #field {
+    width: 100%;
+    height: 100%;
+  }
+
   @keyframes glow {
     0% {
       box-shadow: 0 0 10px #fff;
@@ -19,4 +25,83 @@ body, html {
       box-shadow: 0 0 20px 10px #fff;
     }
   }
-  
+
+.GameOver {
+  display: none; /* Сначала скрыть элемент */
+  position: relative;
+  z-index: 0;
+}
+
+.GameOver.Show {
+  display: flex; /* Показать элемент при наличии класса "show" */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  flex-direction: column;
+  position: fixed; /* Чтобы оставаться на месте при прокрутке */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.GameOver.Hide {
+  display: none;
+}
+
+.GameOver .Heading {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.GameOver .RestartButton {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  margin-top: 0px; /* Отступ сверху */
+  padding: 20px 30px; /* Поля вокруг текста кнопки */
+  border: none;
+  cursor: pointer;
+  z-index: 1; /* Выше по стеку */
+}
+
+.LevelComplete {
+  display: none; /* Сначала скрыть элемент */
+  position: relative;
+  z-index: 0;
+}
+
+
+.LevelComplete.Show {
+  display: flex; /* Показать элемент при наличии класса "show" */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  position: fixed; /* Чтобы оставаться на месте при прокрутке */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.LevelComplete.Hide {
+  display: none;
+}
+
+.LevelComplete .Heading {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.Score {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  padding-left: 40px; 
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
